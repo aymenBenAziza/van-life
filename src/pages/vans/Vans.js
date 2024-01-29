@@ -1,34 +1,33 @@
-import React, { useEffect, useState } from "react";
-import './vans.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
+import './vans.css'
 
 export default function Vans() {
-    const [vans, setVans] = useState([]);
+    const [vans, setVans] = React.useState([]);
 
-    useEffect(() => {
+    React.useEffect(() => {
         fetch("/api/vans")
             .then(res => res.json())
             .then(data => setVans(data.vans))
     }, []);
 
     const vanElements = vans.map(van => (
-        <div key={van.id} className="col-lg-4 col-md-6 mb-4">
-            <NavLink to={`vans/${van.id}`} className="van-link">
+        <div key={van.id} className="col-lg-4 col-md-6 mb-4 van">
+            <Link to={`/vans/${van.id}`} className="van-link">
                 <div className="van-tile">
-                    <img alt="van car image" src={van.imageUrl} className="img-fluid" />
+                    <img src={van.imageUrl} className="img-fluid" alt={van.name} />
                     <div className="van-info">
                         <h3>{van.name}</h3>
                         <p>${van.price}<span>/day</span></p>
                     </div>
                     <i className={`van-type ${van.type} selected`}>{van.type}</i>
                 </div>
-            </NavLink>
+            </Link>
         </div>
     ));
 
     return (
-        <div className="container mt-5">
+        <div className="container vans mt-5">
             <h1 className="text-center">Explore our van options</h1>
             <div className="row">
                 {vanElements}

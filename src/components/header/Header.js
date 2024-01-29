@@ -10,8 +10,8 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg nav-container shadow-sm">
+    <header className='shadow-sm'>
+      <nav className="navbar navbar-expand-lg  nav-container">
         <div className="container-fluid">
           <NavLink to="." className="navbar-brand" style={{ fontSize: '24px', fontWeight: 'bold' }}>
             VAN-LIFE

@@ -5,8 +5,10 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Host from './pages/host/Host';
 import Vans from './pages/vans/Vans';
+import VanDetails from './pages/vanDetails/vanDetail';
 import './server'
-import VansDetails from './pages/vansDetail/vansDetail';
+
+
 
 function App() {
 
@@ -15,9 +17,8 @@ function App() {
       <Route index element = {<Home />} />
       <Route path='about' element = {<About />} />
       <Route path='host' element = {<Host />} />
-      <Route path='vans' element = {<Vans />}>
-        <Route path=':id' element={<VansDetails />} />
-      </Route>
+      <Route path='vans' element = {<Vans />} />
+      <Route path='vans/:id' element={<VanDetails />} />
     </Route>
   ))
 
