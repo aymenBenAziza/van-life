@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7ed29f36.css",
+    "main.js": "/static/js/main.ed79a249.js",
+    "static/media/van.jpg": "/static/media/van.7ad8ac76de73fc738ef3.jpg",
+    "static/media/about-hero.png": "/static/media/about-hero.48ae7673b56e273d7b76.png",
+    "static/media/reviews-graph.png": "/static/media/reviews-graph.3d83a192d3a217c0aa43.png",
+    "static/media/income-graph.png": "/static/media/income-graph.2f3f13ca6ead9a46044b.png",
+    "index.html": "/index.html",
+    "main.7ed29f36.css.map": "/static/css/main.7ed29f36.css.map",
+    "main.ed79a249.js.map": "/static/js/main.ed79a249.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ed29f36.css",
+    "static/js/main.ed79a249.js"
+  ]
+}
